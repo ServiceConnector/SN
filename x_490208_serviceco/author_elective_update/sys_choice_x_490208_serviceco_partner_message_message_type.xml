@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="message_type" table="x_490208_serviceco_partner_message" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>message_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Insert</label>
+            <language>en</language>
+            <name>x_490208_serviceco_partner_message</name>
+            <sequence>10</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 06:46:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>415a79bc1b785010ab6fa9b4bd4bcb05</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 06:46:57</sys_updated_on>
+            <value>insert</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>message_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Update</label>
+            <language>en</language>
+            <name>x_490208_serviceco_partner_message</name>
+            <sequence>20</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 06:47:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b5af5bc1b785010ab6fa9b4bd4bcba6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 06:47:15</sys_updated_on>
+            <value>update</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>message_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unknown</label>
+            <language>en</language>
+            <name>x_490208_serviceco_partner_message</name>
+            <sequence>30</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 06:47:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bb6a75fc1b785010ab6fa9b4bd4bcb4a</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 06:47:44</sys_updated_on>
+            <value>unknown</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>message_type</element>
+            <name>x_490208_serviceco_partner_message</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 06:46:45</sys_created_on>
+            <sys_id>5f5af97c1b785010ab6fa9b4bd4bcb76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>message_type</sys_name>
+            <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+            <sys_update_name>sys_choice_x_490208_serviceco_partner_message_message_type</sys_update_name>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 06:46:45</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-07 12:11:44</sys_created_on>
+        <sys_id>413b0c4b1b241010ab6fa9b4bd4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_490208_serviceco_event.x_490208_serviceco.event_user</sys_name>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_security_acl display_value="x_490208_serviceco_event">813b0c4b1b241010ab6fa9b4bd4bcbdf</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_413b0c4b1b241010ab6fa9b4bd4bcbe2</sys_update_name>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-07 12:11:44</sys_updated_on>
+        <sys_user_role display_value="x_490208_serviceco.event_user" name="x_490208_serviceco.event_user">453b884b1b241010ab6fa9b4bd4bcb1c</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

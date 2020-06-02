@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Service Connector Attribute Mapping" max_length="40" name="x_490208_serviceco_service_connector_attribute_mapping" sizeclass="4" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Advanced" max_length="40" name="advanced" type="boolean"/>
+        <element label="Definition Partner" max_length="32" name="definition_partner" reference="x_490208_serviceco_definitionpartner" type="reference"/>
+        <element label="External Field" max_length="150" name="external_field" type="string"/>
+        <element label="Inbound Definition" max_length="32" name="inbound_definition" reference="x_490208_serviceco_inbound_definition" type="reference"/>
+        <element choice="1" label="Integration Type" max_length="40" name="integration_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inbound" sequence="10" value="inbound"/>
+                <element inactive_on_update="false" label="Outbound" sequence="20" value="outbound"/>
+            </choice>
+        </element>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Outbound Definition" max_length="32" name="outbound_definition" reference="x_490208_serviceco_outbound_definition" type="reference"/>
+        <element label="SCC Field" max_length="150" name="scc_field" type="string"/>
+        <element label="Script" max_length="8000" name="script" type="script"/>
+        <element choice="1" label="Supply Value" max_length="40" name="supply_value" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Create and Change" sequence="10" value="create_and_change"/>
+                <element inactive_on_update="false" label="Only Create" sequence="20" value="only_create"/>
+                <element inactive_on_update="false" label="Always" sequence="30" value="always"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="outbound_definition"/>
+        </index>
+        <index name="index2">
+            <element name="inbound_definition"/>
+        </index>
+        <index name="index3">
+            <element name="definition_partner"/>
+        </index>
+    </element>
+</database>

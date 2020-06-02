@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="customer_field" label="Customer Field" language="en" table="x_490208_serviceco_define_customer">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>customer_field</element>
+            <help/>
+            <hint/>
+            <label>Customer Field</label>
+            <language>en</language>
+            <name>x_490208_serviceco_define_customer</name>
+            <plural>Customer Fields</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-19 03:43:33</sys_created_on>
+            <sys_id>8af948361b3c1010ab6fa9b4bd4bcb7f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Customer Field</sys_name>
+            <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+            <sys_update_name>sys_documentation_x_490208_serviceco_define_customer_customer_field_en</sys_update_name>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-19 03:43:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

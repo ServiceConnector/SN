@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Event" max_length="40" name="x_490208_serviceco_event" sizeclass="0" type="collection"/>
+</database>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Service Connector Action" max_length="40" name="x_490208_serviceco_service_connector_action" sizeclass="2" type="collection">
+        <element choice="1" label="Action" max_length="40" name="action" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Error" sequence="10" value="error"/>
+                <element inactive_on_update="false" label="Insert" sequence="20" value="insert"/>
+                <element inactive_on_update="false" label="Response" sequence="30" value="response"/>
+            </choice>
+        </element>
+        <element label="Advanaced" max_length="40" name="advanaced" type="boolean"/>
+        <element label="Inbound Definition" max_length="32" name="inbound_definition" reference="x_490208_serviceco_inbound_definition" type="reference"/>
+        <element label="Method" max_length="100" name="method" type="string"/>
+        <element label="Script" max_length="8000" name="script" type="script"/>
+        <element label="Script Include" max_length="32" name="script_include" reference="sys_script_include" type="reference"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Default" sequence="10" value="default"/>
+                <element inactive_on_update="false" label="Advance" sequence="20" value="advance"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="script_include"/>
+        </index>
+        <index name="index2">
+            <element name="inbound_definition"/>
+        </index>
+    </element>
+</database>

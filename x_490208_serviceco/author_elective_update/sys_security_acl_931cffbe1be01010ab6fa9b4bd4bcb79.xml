@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_490208_serviceco_service_connector_transform</description>
+        <name>x_490208_serviceco_service_connector_transform</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-07 11:05:48</sys_created_on>
+        <sys_id>931cffbe1be01010ab6fa9b4bd4bcb79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_490208_serviceco_service_connector_transform</sys_name>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_update_name>sys_security_acl_931cffbe1be01010ab6fa9b4bd4bcb79</sys_update_name>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-07 11:05:48</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</application>
+        <file_path/>
+        <instance_id>fd0aa5a6db6d3b440b9d21c405961927</instance_id>
+        <instance_name>dev86625</instance_name>
+        <name>sys_security_acl_931cffbe1be01010ab6fa9b4bd4bcb79</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description>Default access control on x_490208_serviceco_service_connector_transform</description><name>x_490208_serviceco_service_connector_transform</name><operation display_value="create">create</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>service_connector</sys_created_by><sys_created_on>2020-05-07 11:05:48</sys_created_on><sys_id>931cffbe1be01010ab6fa9b4bd4bcb79</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_490208_serviceco_service_connector_transform</sys_name><sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package><sys_policy/><sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope><sys_update_name>sys_security_acl_931cffbe1be01010ab6fa9b4bd4bcb79</sys_update_name><sys_updated_by>service_connector</sys_updated_by><sys_updated_on>2020-05-07 11:05:48</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-154703057</payload_hash>
+        <record_name>x_490208_serviceco_service_connector_transform</record_name>
+        <reverted_from/>
+        <source>f85e16f21b201010ab6fa9b4bd4bcb8b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-07 11:05:48</sys_created_on>
+        <sys_id>9b1cffbe1be01010ab6fa9b4bd4bcb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>171eed01d3f0000001</sys_recorded_at>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-07 11:05:48</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>d31cffbe9ee01010ee6cd0a845de0f7c</update_guid>
+        <update_guid_history>d31cffbe9ee01010ee6cd0a845de0f7c:-154703057</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-07 11:06:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>081f714dd836405c83c1dff502c92410</sys_id>
+        <sys_metadata>931cffbe1be01010ab6fa9b4bd4bcb79</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_490208_serviceco_service_connector_transform</sys_name>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_parent display_value="">2f1cffbe1be01010ab6fa9b4bd4bcb91</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_scope_delete display_value="">87188d88bcaf4d7198d1f4b8442fcfa9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_931cffbe1be01010ab6fa9b4bd4bcb79</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_931cffbe1be01010ab6fa9b4bd4bcb79">9b1cffbe1be01010ab6fa9b4bd4bcb7c</sys_update_version>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-07 11:06:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

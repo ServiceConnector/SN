@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="supply_value" table="x_490208_serviceco_service_connector_attribute_mapping" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>supply_value</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Create and Change</label>
+            <language>en</language>
+            <name>x_490208_serviceco_service_connector_attribute_mapping</name>
+            <sequence>10</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-11 08:22:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>502d3f841bb01010ab6fa9b4bd4bcbaa</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-11 08:23:16</sys_updated_on>
+            <value>create_and_change</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>supply_value</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Only Create</label>
+            <language>en</language>
+            <name>x_490208_serviceco_service_connector_attribute_mapping</name>
+            <sequence>20</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-11 08:23:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>053d3b441bb01010ab6fa9b4bd4bcbcd</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-11 08:23:52</sys_updated_on>
+            <value>only_create</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>supply_value</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Always</label>
+            <language>en</language>
+            <name>x_490208_serviceco_service_connector_attribute_mapping</name>
+            <sequence>30</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-11 08:24:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>085d3f841bb01010ab6fa9b4bd4bcba2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-11 08:24:15</sys_updated_on>
+            <value>always</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>supply_value</element>
+            <name>x_490208_serviceco_service_connector_attribute_mapping</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-11 08:22:57</sys_created_on>
+            <sys_id>893dbb841bb01010ab6fa9b4bd4bcbd3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>supply_value</sys_name>
+            <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+            <sys_update_name>sys_choice_x_490208_serviceco_service_connector_attribute_mapping_supply_value</sys_update_name>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-11 08:22:57</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

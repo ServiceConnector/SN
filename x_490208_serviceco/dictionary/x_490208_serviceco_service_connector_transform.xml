@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Service Connector Transform" max_length="40" name="x_490208_serviceco_service_connector_transform" sizeclass="2" type="collection">
+        <element label="Description" max_length="200" name="description" type="string"/>
+        <element choice="1" label="Event" max_length="40" name="event" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pre-Validate" sequence="10" value="pre_validate"/>
+                <element inactive_on_update="false" label="On-Before" sequence="20" value="on_before"/>
+                <element inactive_on_update="false" label="On-After" sequence="30" value="on_after"/>
+            </choice>
+        </element>
+        <element label="Inbound Definition" max_length="32" name="inbound_definition" reference="x_490208_serviceco_inbound_definition" type="reference"/>
+        <element choice="1" label="Integration Type" max_length="40" name="integration_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inbound" sequence="10" value="inbound"/>
+                <element inactive_on_update="false" label="Outbound" sequence="20" value="outbound"/>
+            </choice>
+        </element>
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element label="Script" max_length="8000" name="script" type="script"/>
+        <index name="index">
+            <element name="inbound_definition"/>
+        </index>
+    </element>
+</database>

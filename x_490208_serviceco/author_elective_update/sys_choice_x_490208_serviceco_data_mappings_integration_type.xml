@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="integration_type" table="x_490208_serviceco_data_mappings" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>integration_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Inbound</label>
+            <language>en</language>
+            <name>x_490208_serviceco_data_mappings</name>
+            <sequence>10</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 07:18:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f4910af01bb85010ab6fa9b4bd4bcbb0</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 07:18:33</sys_updated_on>
+            <value>inbound</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>integration_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Outbound</label>
+            <language>en</language>
+            <name>x_490208_serviceco_data_mappings</name>
+            <sequence>20</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 07:18:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6a910a341bb85010ab6fa9b4bd4bcb67</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 07:18:50</sys_updated_on>
+            <value>outbound</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>integration_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Both</label>
+            <language>en</language>
+            <name>x_490208_serviceco_data_mappings</name>
+            <sequence>30</sequence>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 07:18:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b2a1c6341bb85010ab6fa9b4bd4bcbd7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 07:19:07</sys_updated_on>
+            <value>both</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>integration_type</element>
+            <name>x_490208_serviceco_data_mappings</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 07:18:23</sys_created_on>
+            <sys_id>2e9186f01bb85010ab6fa9b4bd4bcb43</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>integration_type</sys_name>
+            <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+            <sys_update_name>sys_choice_x_490208_serviceco_data_mappings_integration_type</sys_update_name>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 07:18:23</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

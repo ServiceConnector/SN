@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Inbound Definition" max_length="40" name="x_490208_serviceco_inbound_definition" sizeclass="4" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="1" label="Action" mandatory="true" max_length="40" name="action" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Insert" value="insert"/>
+                <element inactive_on_update="false" label="Update" value="update"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Advanced Action" max_length="40" name="advanced_action" type="boolean"/>
+        <element label="Condition" max_length="8000" name="condition" type="script"/>
+        <element label="Definition Partner" max_length="32" name="definition_partner" reference="x_490208_serviceco_definitionpartner" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Description" max_length="4000" name="description" type="string"/>
+        <element label="Match User Name" max_length="40" name="match_user_name" type="boolean"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Number" max_length="50" name="number" type="string"/>
+        <element label="Key field" max_length="50" name="number_field" type="string"/>
+        <element default="100" label="Order" max_length="40" name="order" type="integer"/>
+        <element label="Script" max_length="8000" name="script" type="script"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+        <element label="Template" max_length="32" name="template" reference="sys_template" type="reference"/>
+        <element label="User Name" max_length="32" name="user_name" reference="sys_user" type="reference"/>
+        <element label="New Translated Text" max_length="40" name="u_translated_text_2" type="translated_text"/>
+        <element attributes="is_multi_text=true,preview_first=true,preview_selector=true" label="New Wiki" max_length="65536" name="u_wiki_text_3" type="wiki_text"/>
+        <index name="index">
+            <element name="template"/>
+        </index>
+        <index name="index2">
+            <element name="user_name"/>
+        </index>
+        <index name="index3">
+            <element name="definition_partner"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Outbound Definition" max_length="40" name="x_490208_serviceco_outbound_definition" sizeclass="1" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Definition Partner" max_length="32" name="definition_partner" reference="x_490208_serviceco_definitionpartner" type="reference"/>
+        <element label="Description" max_length="200" name="description" type="string"/>
+        <element label="Endpoint" max_length="32" name="endpoint" reference="cmdb_ci_endpoint" type="reference"/>
+        <element label="Name" max_length="200" name="name" type="string"/>
+        <element label="Number" max_length="50" name="number" type="string"/>
+        <index name="index">
+            <element name="endpoint"/>
+        </index>
+        <index name="index2">
+            <element name="definition_partner"/>
+        </index>
+    </element>
+</database>

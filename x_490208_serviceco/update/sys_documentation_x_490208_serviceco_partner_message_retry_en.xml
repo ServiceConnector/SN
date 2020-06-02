@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="retry" label="Retry" language="en" table="x_490208_serviceco_partner_message">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>retry</element>
+            <help/>
+            <hint/>
+            <label>Retry</label>
+            <language>en</language>
+            <name>x_490208_serviceco_partner_message</name>
+            <plural>Retries</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 07:02:29</sys_created_on>
+            <sys_id>a5fdb1b01bb85010ab6fa9b4bd4bcb53</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Retry</sys_name>
+            <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+            <sys_update_name>sys_documentation_x_490208_serviceco_partner_message_retry_en</sys_update_name>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 07:02:29</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

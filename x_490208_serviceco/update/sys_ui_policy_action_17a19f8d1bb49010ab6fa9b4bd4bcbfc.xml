@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>script</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-14 07:46:57</sys_created_on>
+        <sys_id>17a19f8d1bb49010ab6fa9b4bd4bcbfc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>script</sys_name>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_update_name>sys_ui_policy_action_17a19f8d1bb49010ab6fa9b4bd4bcbfc</sys_update_name>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-14 07:47:20</sys_updated_on>
+        <table>x_490208_serviceco_outbound_trigger</table>
+        <ui_policy display_value="Hide Script Field">c961db8d1bb49010ab6fa9b4bd4bcb54</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

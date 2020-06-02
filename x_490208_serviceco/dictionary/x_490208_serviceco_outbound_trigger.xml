@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Outbound Trigger" max_length="40" name="x_490208_serviceco_outbound_trigger" sizeclass="2" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Advanced" max_length="40" name="advanced" type="boolean"/>
+        <element label="Description" max_length="300" name="description" type="string"/>
+        <element label="Name" max_length="200" name="name" type="string"/>
+        <element label="Number" max_length="50" name="number" type="string"/>
+        <element label="Order" max_length="40" name="order" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,extended_operators=VALCHANGES;CHANGESFROM;CHANGESTO" dependent="table_name" dependent_on_field="table_name" label="Outbound Conditions" max_length="4000" name="outbound_conditions" type="conditions" use_dependent_field="true"/>
+        <element label="Outboud Definition" max_length="32" name="outboun_definition" reference="x_490208_serviceco_outbound_definition" type="reference"/>
+        <element default="if(condition) {&#13;&#10;&#13;&#10;//answer = true;&#13;&#10;&#13;&#10;} else {&#13;&#10;&#13;&#10;//answer = false;&#13;&#10;&#13;&#10;}" label="Script" max_length="8000" name="script" type="script"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Table Name" max_length="80" name="table_name" type="table_name"/>
+        <element choice="1" label="When Run" max_length="40" name="when_run" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Insert" sequence="10" value="insert"/>
+                <element inactive_on_update="false" label="Update" sequence="20" value="update"/>
+                <element inactive_on_update="false" label="Always" sequence="30" value="always"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="outboun_definition"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Non-standard (Valid only for non-task)" section_id="df1176b01b3c5010ab6fa9b4bd4bcbac" sys_domain="global" table="x_490208_serviceco_inbound_definition" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>advanced_action</element>
+            <position>0</position>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 10:56:35</sys_created_on>
+            <sys_id>f28332341b3c5010ab6fa9b4bd4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Non-standard (Valid only for non-task)" display_value="Non-standard (Valid only for non-task)" name="x_490208_serviceco_inbound_definition" sys_domain="global" view="Default view">df1176b01b3c5010ab6fa9b4bd4bcbac</sys_ui_section>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 10:56:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>action_script</element>
+            <position>1</position>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 10:56:35</sys_created_on>
+            <sys_id>768332341b3c5010ab6fa9b4bd4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Non-standard (Valid only for non-task)" display_value="Non-standard (Valid only for non-task)" name="x_490208_serviceco_inbound_definition" sys_domain="global" view="Default view">df1176b01b3c5010ab6fa9b4bd4bcbac</sys_ui_section>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 10:56:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Non-standard (Valid only for non-task)</caption>
+            <header>false</header>
+            <name>x_490208_serviceco_inbound_definition</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>service_connector</sys_created_by>
+            <sys_created_on>2020-05-13 10:45:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>df1176b01b3c5010ab6fa9b4bd4bcbac</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Non-standard (Valid only for non-task)</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+            <sys_update_name>sys_ui_section_df1176b01b3c5010ab6fa9b4bd4bcbac</sys_update_name>
+            <sys_updated_by>service_connector</sys_updated_by>
+            <sys_updated_on>2020-05-13 10:56:35</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

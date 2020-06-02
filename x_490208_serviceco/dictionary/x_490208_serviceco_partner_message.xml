@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Partner Message" max_length="40" name="x_490208_serviceco_partner_message" sizeclass="1" type="collection">
+        <element label="Definition Partner" max_length="32" name="definition_partner" reference="x_490208_serviceco_definitionpartner" type="reference"/>
+        <element label="External Number" max_length="150" name="external_number" type="string"/>
+        <element label="Header" max_length="4000" name="header" type="journal"/>
+        <element label="HTTP Status" max_length="50" name="http_status" type="string"/>
+        <element choice="1" label="Integration Type" max_length="40" name="integration_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inbound" sequence="10" value="inbound"/>
+                <element inactive_on_update="false" label="Outbound" sequence="20" value="outbound"/>
+            </choice>
+        </element>
+        <element label="Message" max_length="4000" name="message" type="journal"/>
+        <element choice="1" label="Message Status" max_length="40" name="message_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Insert" sequence="10" value="inserted"/>
+                <element inactive_on_update="false" label="Pending" sequence="20" value="pending"/>
+                <element inactive_on_update="false" label="Processed" sequence="30" value="processed"/>
+                <element inactive_on_update="false" label="Expired" sequence="40" value="expired"/>
+                <element inactive_on_update="false" label="Error" sequence="50" value="error"/>
+            </choice>
+        </element>
+        <element choice="1" label="Message Type" max_length="40" name="message_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Insert" sequence="10" value="insert"/>
+                <element inactive_on_update="false" label="Update" sequence="20" value="update"/>
+                <element inactive_on_update="false" label="Unknown" sequence="30" value="unknown"/>
+            </choice>
+        </element>
+        <element label="Number" max_length="50" name="number" type="string"/>
+        <element label="Response" max_length="4000" name="response" type="journal"/>
+        <element label="Retry" max_length="40" name="retry" type="integer"/>
+        <element label="SCC number" max_length="32" name="scc_number" type="document_id"/>
+        <element label="Transaction Definition" max_length="100" name="transaction_definition" type="string"/>
+        <index name="index">
+            <element name="scc_number"/>
+        </index>
+        <index name="index2">
+            <element name="definition_partner"/>
+        </index>
+    </element>
+</database>

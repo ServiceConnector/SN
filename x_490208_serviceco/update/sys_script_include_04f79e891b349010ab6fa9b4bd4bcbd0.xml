@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_490208_serviceco.InboundDefinitionHelpers</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>InboundDefinitionHelpers</name>
+        <script><![CDATA[var InboundDefinitionHelpers = Class.create();
+InboundDefinitionHelpers.prototype = {
+    initialize: function() {
+
+        this.MESSAGE_TYPE = {
+            XML: "xml",
+            JSON: "json"
+        };
+
+        this.TABLE = {
+            CUSTOMER: "x_490208_serviceco_define_customer",
+            PARTNER_MESSAGE: "x_490208_serviceco_partner_message",
+            INBOUND_DEFINITION: "x_490208_serviceco_inbound_definition",
+            ATTRIBUTE_MAPPING: "x_490208_serviceco_service_connector_attribute_mapping",
+            TRANSFORM: "x_490208_serviceco_service_connector_transform"
+        };
+
+        this.TRANSFORM_ACTION = {
+            VALIDATION: "pre_validation",
+            BEFORE: "on_before",
+            AFTER: "on_after"
+        };
+
+        this.INTEGRATION_TYPE = {
+			INBOUND : "inbound",
+			OUTBOUND : "outbound"
+		};
+
+        this.CUSTOMER = {
+            user: gs.getUserID()
+        };
+
+        this.TRIGGER = {
+            PARTNER: "",
+			TABLE : "",
+            ACTION : "",
+            TEMPLATE : "",
+            INBOUND_DEFINITION: ""
+		};
+
+        this.DATA = {};
+
+        this.scriptIO = { //script inputs and outputs
+            current: null,
+            message: null,
+            action: null,
+            error_flag: false,
+            error_code: 500,
+            error_message: ""
+        };
+
+        this.partnerMessage = {};
+        this.partnerMessageNumber = "";
+    },
+
+    processRequest: function(data) {
+
+        this.partnerMessageNumber = this.createPartnerMessage(data);
+
+        this.mappingCustomerData(data);
+        //gs.info(JSON.stringify(this.CUSTOMER));
+        
+        var validMessage = this.isValidMessage(data);
+        if(!validMessage) {
+            //errors
+        }
+
+        this.preValidation(data);
+
+        this.mapMessage(data);
+        
+    },
+
+    preValidation: function(data) {
+        var gr = new Gliderecord(this.TABLE.TRANSFROM);
+        gr.addQuery("integration_type", this.INTEGRATION_TYPE.INBOUND);
+        gr.addQuery("inbound_definition", this.TRIGGER.INBOUND_DEFINITION);
+        gr.addQuery("event", this.TRANSFORM_ACTION.VALIDATION);
+        gr.orderBy("order");
+        gr.query();
+        while(gr.next()) {
+            var evaluator = new GlideScopedEvaluator();
+            evaluator.putVariable("message", data);
+            evaluator.putVariable("error_flag", false);
+            evaluator.putVariable("error_message", "");
+
+            evaluator.evaluateScript(data, "script", null);
+
+            evaluator.getVariable("error_flag") || false;
+            evaluator.getVariable("error_message") || "";
+        }
+    },
+
+    mapMessage: function(data) {
+        var k;
+        var gr = new GlideRecord(this.TABLE.ATTRIBUTE_MAPPING);
+        gr.addQuery("definition_partner", this.TRIGGER.PARTNER);
+        gr.addQuery("inbound_definition", this.TRIGGER.INBOUND_DEFINITION);
+        gr.addQuery("integration_type", this.INTEGRATION_TYPE.INBOUND);
+        gr.addActiveQuery();
+        gr.query();
+        while(gr.next()) {
+            for(k in data) {
+                if(data[k] && gr.getValue("external_field").toLowerCase() == k.toLowerCase()) {
+                    this.DATA[gr.getValue("scc_field")] = data[k];
+                }
+            }
+            if(gr.advanced) {
+                var evaluator = new GlideScopedEvaluator();
+                evaluator.putVariable("input", this.DATA[gr.getValue("scc_field")]);
+                evaluator.putVariable("output", null);
+
+                evaluator.evaluateScript(data, "action_script", null);
+
+                this.DATA[gr.getValue("scc_field")] = evaluator.getVariable("output");
+            }
+        }
+    },
+
+    //find an inbound definition
+    isValidMessage: function(data) {
+        var isExist = false;
+        var inbDef = new GlideRecord(this.TABLE_NAME.INBOUND_DEFINITION);
+        inbDef.addQuery("active", true);
+        inbDef.query();
+        while(inbDef.next()){
+            var conditions = this.scriptCondition(inbDef, data, condition);
+            isExist = this.conditionTracking(conditions, inbDef.match_user_name, inbDef.user_name);
+            if(isExist == true) {
+                this.TRIGGER.PARTNER = inbDef.getValue("definition_partner");
+                this.TRIGGER.TABLE = inbDef.getValue("table");
+                this.TRIGGER.ACTION = inbDef.getValue("action");
+                this.TRIGGER.TEMPLATE = inbDef.getValue("template");
+                this.TRIGGER.INBOUND_DEFINITION = inbDef;
+
+                if(inbDef.advanceAction){
+                    this.advanceChecking(inbDef, data);
+                }
+                break;
+            }
+        }
+        return isExist;
+    },
+
+    advanceChecking: function(inboundDefinition, data) {
+        this.scriptIO.current = inboundDefinition;
+        this.scriptIO.message = data;
+        var result = this.scriptAction(this.scriptIO.current, this.scriptIO, this.scriptIO);
+
+        var k;
+        for(k in result) {
+            this.scriptIO[k] = result[k];
+        }
+    },
+
+    //current: current_record_object; inputs: object; outputs: object
+    scriptAction: function(current, inputs, outputs) {
+        var k;
+        var evaluator = new GlideScopedEvaluator();
+        for(k in inputs) {
+            evaluator.putVariable(k, inputs[k]);
+        }
+
+        evaluator.evaluateScript(current, "script", null);
+
+        for(k in outputs) {
+            outputs[k] = evaluator.getVariable(k);
+        }
+
+        return outputs;
+    },
+
+    //return true or false
+    scriptCondition: function(record, data, fieldName) {
+        var evaluator = new GlideScopedEvaluator();
+        evaluator.putVariable("message", record);
+        return conditionEvaluator.evaluateScript(record, fieldName, null);
+    },
+
+    //return true or false
+    conditionTracking: function(conditions, matchUser, user) {
+        var checkConditions = false, checkUser = false;
+        var result = false;
+
+        if(conditions) {
+            checkConditions = true;
+        }
+        if(matchUser) {
+            if(user == this.CUSTOMER.user) {
+                checkUser = true;
+            }
+        } else {
+            checkUser = true;
+        }
+
+        if(checkConditions && checkUser) {
+            result = true;
+        }
+        return result;
+    },
+
+    createPartnerMessage: function(data) {
+        var result = "";
+        var messageType = this.getMessageType(data.slice(0, 1));
+        switch (messageType) {
+            case this.MESSAGE_TYPE.XML:
+                result = createPartnerMessageXML(data);
+                break;
+            case this.MESSAGE_TYPE.JSON:
+                result = createPartnerMessageJSON(data);
+                break;
+            default:
+                //error message
+                break;
+        }
+        return result;//record number
+    },
+    
+    createPartnerMessageJSON: function(data) {
+        var result = "";
+        var gr = new GlideRecord(this.TABLE.PARTNER_MESSAGE);
+        gr.initialize();
+        gr.setValue("message_status", "inserted");
+        gr.setValue("message", JSON.stringify(data));
+        gr.setValue("integration_type", this.INTEGRATION_TYPE.INBOUND);
+        if(gr.insert()) {
+            this.partnerMessage = gr;
+            result = gr.number.getDisplayValue();
+        } else {
+            //validate data
+        }
+        return result; //record number
+    },
+
+    createPartnerMessageXML: function(data) {
+        var result = "";
+
+        // if(gr.insert()) {
+        //     this.partnerMessage = gr;
+        //     result = gr.number.getDisplayValue();
+        // } else {
+        //     //validate data
+        // }
+
+        return result; //record number
+    },
+
+    getMessageType: function(firstCharacter) {
+        var result = "";
+        switch (firstCharacter) {
+            case "<":
+                result = this.MESSAGE_TYPE.XML;
+                break;
+            case "{":
+                result = this.MESSAGE_TYPE.JSON;
+                break;
+            default:
+                //error message
+                break;
+        }
+        return result;
+    },
+
+    //mapping data to customer object
+    mappingCustomerData: function(data) {
+        var k;
+        var gr = new GlideRecord(this.TABLE.CUSTOMER);
+        gr.addQuery("active", true);
+        gr.query();
+        while(gr.next()) {
+            for(k in data) {
+                if(data[k] && gr.getValue("customer_field").toLowerCase() == k.toLowerCase()) {
+                    this.CUSTOMER[gr.getValue("scc_field")] = data[k];
+                }
+            }    
+        }
+    },
+
+    type: 'InboundDefinitionHelpers'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-14 03:35:12</sys_created_on>
+        <sys_id>04f79e891b349010ab6fa9b4bd4bcbd0</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>InboundDefinitionHelpers</sys_name>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_update_name>sys_script_include_04f79e891b349010ab6fa9b4bd4bcbd0</sys_update_name>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-21 08:30:13</sys_updated_on>
+    </sys_script_include>
+</record_update>

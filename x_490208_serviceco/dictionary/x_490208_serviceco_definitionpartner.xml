@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Definition Partner" max_length="40" name="x_490208_serviceco_definitionpartner" sizeclass="2" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Description" max_length="300" name="description" type="string"/>
+        <element label="External Partner" max_length="100" name="external_partner" type="string"/>
+        <element label="number" max_length="50" name="number" type="string"/>
+    </element>
+</database>

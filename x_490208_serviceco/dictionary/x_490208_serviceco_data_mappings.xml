@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Data Mappings" max_length="40" name="x_490208_serviceco_data_mappings" sizeclass="0" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Definition Partner" max_length="32" name="definition_partner" reference="x_490208_serviceco_definitionpartner" type="reference"/>
+        <element label="External Field Name" max_length="200" name="external_field_name" type="string"/>
+        <element label="External Field Value" max_length="150" name="external_field_value" type="string"/>
+        <element choice="1" label="Integration Type" max_length="40" name="integration_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inbound" sequence="10" value="inbound"/>
+                <element inactive_on_update="false" label="Outbound" sequence="20" value="outbound"/>
+                <element inactive_on_update="false" label="Both" sequence="30" value="both"/>
+            </choice>
+        </element>
+        <element label="SCC Field Name" max_length="150" name="scc_field_name" type="string"/>
+        <element label="SCC Field Value" max_length="150" name="scc_field_value" type="string"/>
+        <element label="SCC table" max_length="80" name="scc_table" type="table_name"/>
+        <index name="index">
+            <element name="definition_partner"/>
+        </index>
+    </element>
+</database>

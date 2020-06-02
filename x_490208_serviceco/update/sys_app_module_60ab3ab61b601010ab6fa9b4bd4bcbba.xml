@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Service Connector">ad142ef61b201010ab6fa9b4bd4bcb87</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Inbound Definitions</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_490208_serviceco_inbound_definition</name>
+        <order>1200</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_490208_serviceco.inbound_definition_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-07 06:24:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>60ab3ab61b601010ab6fa9b4bd4bcbba</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Inbound Definitions</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_update_name>sys_app_module_60ab3ab61b601010ab6fa9b4bd4bcbba</sys_update_name>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-07 11:56:18</sys_updated_on>
+        <timeline_page/>
+        <title>Inbound Definitions</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

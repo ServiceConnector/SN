@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>SCC</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var body = request.body.data;
+	
+// 	response.setContentType("application/json");
+// 	var writer = response.getStreamWriter();
+	
+    var helpers = new InboundDefinitionHelpers();
+	helpers.processRequest(body);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_490208_serviceco/scc</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>service_connector</sys_created_by>
+        <sys_created_on>2020-05-19 03:04:56</sys_created_on>
+        <sys_id>620184fe1bf81010ab6fa9b4bd4bcbec</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>SCC</sys_name>
+        <sys_package display_value="ServiceConnector" source="x_490208_serviceco">785e16f21b201010ab6fa9b4bd4bcb89</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ServiceConnector">785e16f21b201010ab6fa9b4bd4bcb89</sys_scope>
+        <sys_update_name>sys_ws_operation_620184fe1bf81010ab6fa9b4bd4bcbec</sys_update_name>
+        <sys_updated_by>service_connector</sys_updated_by>
+        <sys_updated_on>2020-05-20 08:07:31</sys_updated_on>
+        <web_service_definition display_value="SCC">4cd004fe1bf81010ab6fa9b4bd4bcb13</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
